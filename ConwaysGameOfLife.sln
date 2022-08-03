@@ -2,9 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConwaysGameOfLife", "ConwaysGameOfLife\ConwaysGameOfLife.csproj", "{3BCBF548-9E1B-4782-A773-994BA56DA666}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CellTest", "CellTest\CellTest.csproj", "{5C8FF948-95A0-4ECD-BDAC-8E5D293AF547}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardTest", "BoardTest\BoardTest.csproj", "{5B31C51C-C814-441F-94B4-61EF2DEBD1C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{5C8FF948-95A0-4ECD-BDAC-8E5D293AF547}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,9 +18,5 @@ Global
 		{5C8FF948-95A0-4ECD-BDAC-8E5D293AF547}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C8FF948-95A0-4ECD-BDAC-8E5D293AF547}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C8FF948-95A0-4ECD-BDAC-8E5D293AF547}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5B31C51C-C814-441F-94B4-61EF2DEBD1C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5B31C51C-C814-441F-94B4-61EF2DEBD1C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5B31C51C-C814-441F-94B4-61EF2DEBD1C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5B31C51C-C814-441F-94B4-61EF2DEBD1C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
