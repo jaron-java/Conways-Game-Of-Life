@@ -15,7 +15,6 @@ public class Cell
     {
         int number = rnd.Next(2);
         State = ((number == 0) ? State = CellState.Dead : CellState.Live);
-        // State = cellState;
     }
 
     public Cell(bool Alive)

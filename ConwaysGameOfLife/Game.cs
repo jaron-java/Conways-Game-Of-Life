@@ -28,8 +28,35 @@ public class Game
                 ExtraBoard.GameBoard[i, j] = newCell;
             }
         }
-
         CurrentBoard = ExtraBoard;
     }
-    
+
+    public bool CompareBoards()
+    {
+        bool flag = true;
+        for (int i = 0; i < Height; i++)
+        {
+            for (int j = 0; j < Width; j++)
+            {
+                if (CurrentBoard.GameBoard[i, j] != ExtraBoard.GameBoard[i, j])
+                    flag = false;
+            }
+        }
+        return flag;
+    }
+
+    public void PlayGame()
+    {
+        bool flag = true;
+        while (flag)
+        {
+            Console.WriteLine($"======{Iterations}========");
+            CurrentBoard.PrintBoard();
+            Thread.Sleep(3000);
+            Iterations++;
+            Console.Clear();
+            flag = CurrentBoard.IsBoardAlive();
+            UpdateBoard();
+        }
+    }
 }

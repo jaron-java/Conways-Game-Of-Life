@@ -65,16 +65,15 @@ public class Board
             if (CheckNeighbor(i, j, dir))
                 neighbors += 1;
         }
-
         return neighbors;
     }
 
 
     public void PrintBoard()
     {
-        for (int i = 0; i < Width; i++)
+        for (int i = 0; i < Height; i++)
         {
-            for (int j = 0; j < Height; j++)
+            for (int j = 0; j < Width; j++)
             {
                 Console.Write((int)GameBoard[i,j].State);
                 Console.Write(" ");
@@ -94,8 +93,6 @@ public class Board
                     flag = true;
             }
         }
-
         return flag;
     }
-    
 }

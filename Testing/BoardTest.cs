@@ -7,6 +7,33 @@ namespace BoardTest;
 public class Tests
 {
     [Test]
+    public void CheckTest()
+    {
+        Board deadBoard = new Board(10, 10, false);
+        Board liveBoard = new Board(10, 10, true);
+        Assert.AreEqual(deadBoard.Check(2, 4), false);
+        Assert.AreEqual(liveBoard.Check(2, 4), true);
+    }
+    [Test]
+    public void ChecKNeighborTest()
+    {
+        Board deadBoard = new Board(10, 10, false);
+        Board liveBoard = new Board(10, 10, true);
+        Assert.AreEqual(liveBoard.CheckNeighbor(5, 5, Direction.UpLeft), true);
+        Assert.AreEqual(deadBoard.CheckNeighbor(5, 5, Direction.Down), false);
+    }
+
+    [Test]
+    public void CheckNeighborsTest()
+    {
+        Board deadBoard = new Board(10, 10, false);
+        Board liveBoard = new Board(10, 10, true);
+        int deadNeighbors = deadBoard.CheckNeighbors(5, 5);
+        int liveNeighbors = liveBoard.CheckNeighbors(5, 5);
+        Assert.AreEqual(deadNeighbors, 0);
+        Assert.AreEqual(liveNeighbors, 8);
+    }
+    [Test]
     public void BoardIsDead()
     {
         Board deadBoard = new Board(10, 10, false);
@@ -19,55 +46,12 @@ public class Tests
         Board liveBoard = new Board(10, 10, true);
         Assert.AreEqual(liveBoard.IsBoardAlive(), true);
     }
-
-    // [Test]
-    // public void IsBoardDead()
-    // {
-    //     Board deadBoard = new Board(10, 10, false);
-    //     Assert.AreEqual(Array.Exists<Cell>(deadBoard, element => element == (CellState.Live)), false);
-    // }
-    [Test]
-    public void TestHeight()
-    {
-        Board newBoard = new Board(10, 1);
-        Assert.AreEqual(newBoard.GameBoard.GetLength(0), 10);
-    }
-
-    [Test]
-    public void TestWidth()
-    {
-        Board newBoard = new Board(1, 10);
-        Assert.AreEqual(newBoard.GameBoard.GetLength(1), 10);
-    }
-
-    [Test]
-    public void TestTotal()
-    {
-        Board newBoard = new Board(10, 10);
-        Assert.AreEqual(newBoard.GameBoard.Length, 100);
-    }
-
+    
     [Test]
     public void NotLiveDead() //this is just testing if they have the same memory 
     {
         Board deadBoard = new Board(10, 10,false);
         Board liveBoard = new Board(10, 10, true);
         Assert.AreNotEqual(deadBoard.GameBoard, liveBoard.GameBoard);
-    }
-
-    [Test]
-    public void NotSize()
-    {
-        Board smallBoard = new Board(2, 2);
-        Board largeBoard = new Board(20, 20);
-        Assert.AreNotEqual(smallBoard, largeBoard);
-    }
-
-    [Test]
-    public void NotBoard()
-    {
-        Board board = new Board(10, 10);
-        Board deadBoard = new Board(10, 10, false);
-        Assert.AreNotEqual(board, deadBoard);
     }
 }
