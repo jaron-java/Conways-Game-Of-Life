@@ -25,11 +25,11 @@ public class Tests
     }
 
     [Test]
-    public void FailingCompareTest()
+    public void NotCompareTest()
     {
         Cell liveCell = new Cell(true);
         Cell deadCell = new Cell(false);
-        Assert.AreEqual(liveCell.State, deadCell.State);
+        Assert.AreNotEqual(liveCell.State, deadCell.State);
     }
 
     [Test]
@@ -61,16 +61,16 @@ public class Tests
     }
 
     [Test]
-    public void failingIsLive()
+    public void notIsLive()
     {
         Cell liveCell = new Cell(true);
-        Assert.AreEqual(liveCell.IsAlive, false);
+        Assert.AreNotEqual(liveCell.IsAlive, false);
     }
 
     [Test]
-    public void failingIsDead()
+    public void notIsDead()
     {
         Cell deadCell = new Cell(false);
-        Assert.AreEqual(deadCell.IsDead, false);
+        Assert.AreNotEqual(deadCell.IsDead, false);
     }
 }
